@@ -1,0 +1,19 @@
+generated: '2026-09-17'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: generallyintelligent.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  8 16:24:05 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: generallyintelligent.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
+note: generallyintelligent.com is the legacy brand domain of Imbue and now only 301s to imbue.com. It
+  still terminates TLS 1.3 with HSTS, but publishes no SPF, DMARC, CAA or DNSSEC — the retired domain
+  is spoofable as a sender. The live brand domain is probed on all/imbue.

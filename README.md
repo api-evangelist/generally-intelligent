@@ -64,5 +64,8 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Generally Intelligent is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/generally-intelligent_stock/
+Generally Intelligent is the former name of Imbue, the San Francisco AI research lab founded in 2021 by Kanjun Qiu and Josh Albrecht. The company rebranded to Imbue in 2023 and `generallyintelligent.com` now redirects permanently to `imbue.com`. This profile records the legacy name only; the living profile, with the company's open-source tooling and (absent) developer API surface, is [api-evangelist/imbue](https://github.com/api-evangelist/imbue).
+
+- Legacy domain: https://generallyintelligent.com/ (301 to https://imbue.com/)
+- Successor: https://imbue.com/
+- Harvest source: https://forgeglobal.com/generally-intelligent_stock/

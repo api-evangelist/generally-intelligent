@@ -1,0 +1,59 @@
+generated: '2026-09-17'
+method: probed
+source: live GET of /.well-known/* on every host the record knows (registrable domain, its
+  301 target imbue.com, and docs.imbue.com), User-Agent Mozilla/5.0, 2026-09-17
+note: >-
+  No well-known document is served on any host. generallyintelligent.com answers 301 to
+  imbue.com for every path; imbue.com answers a real 404 (its own HTML not-found page,
+  ~21.8 KB, not an SPA shell masquerading as 200) for every /.well-known/* path; docs.imbue.com
+  302s to github.com/imbue-ai/sculptor at its root and 404s everywhere else. api.imbue.com,
+  app.imbue.com and sculptor.imbue.com do not resolve. Recorded absence — no WellKnown or
+  SecurityTxt pointer is emitted.
+hosts:
+- host: generallyintelligent.com
+  note: 301 to https://imbue.com/<same path> for every path probed
+  documents:
+  - {path: /.well-known/security.txt, status: 301, file: null}
+  - {path: /.well-known/openid-configuration, status: 301, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 301, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 301, file: null}
+  - {path: /.well-known/api-catalog, status: 301, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 301, file: null}
+  - {path: /.well-known/agent-card.json, status: 301, file: null}
+  - {path: /.well-known/agent.json, status: 301, file: null}
+- host: imbue.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/api-catalog, status: 404, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, file: null}
+  - {path: /.well-known/agent.json, status: 404, file: null}
+  - {path: /security.txt, status: 404, file: null}
+  - {path: /llms.txt, status: 404, file: null}
+- host: docs.imbue.com
+  note: root 302s to https://github.com/imbue-ai/sculptor
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/api-catalog, status: 404, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, file: null}
+  - {path: /.well-known/agent.json, status: 404, file: null}
+  - {path: /llms.txt, status: 404, file: null}
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery ran on imbue.com, generallyintelligent.com and docs.imbue.com —
+    /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs, /docs, /redoc,
+    /graphql and /mcp all 404 (or 301 to the imbue.com 404). No published contract found.
+  probed:
+  - {url: https://imbue.com/openapi.json, status: 404}
+  - {url: https://imbue.com/swagger.json, status: 404}
+  - {url: https://imbue.com/graphql, status: 404}
+  - {url: https://imbue.com/mcp, status: 404}
+  - {url: https://docs.imbue.com/, status: 302, location: https://github.com/imbue-ai/sculptor}
+  - {url: https://docs.imbue.com/openapi.json, status: 404}

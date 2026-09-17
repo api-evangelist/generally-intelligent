@@ -1,17 +1,59 @@
 aid: generally-intelligent
 name: Generally Intelligent
-description: 'Generally Intelligent is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Generally Intelligent is the former name of Imbue, the San Francisco AI research lab
+  founded in 2021 by Kanjun Qiu and Josh Albrecht to build agentic reasoning models and
+  the tooling around them. The company rebranded to Imbue in 2023; its original domain
+  generallyintelligent.com now redirects permanently to imbue.com, and every product,
+  research release and open-source repository that began under the Generally Intelligent
+  name (the Avalon RL benchmark, CARBS hyperparameter tuning, jupyter_ascending) is
+  published today under the Imbue brand and the github.com/imbue-ai organization. Neither
+  name has ever shipped a public, credentialed developer API: there is no OpenAPI, GraphQL,
+  MCP, A2A agent card or llms.txt on any host the company controls, and integration happens
+  through open-source repositories, model artifacts on Hugging Face and research releases.
+  The living profile for this company is all/imbue.
 url: https://raw.githubusercontent.com/api-evangelist/generally-intelligent/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-harvest-source-url: https://forgeglobal.com/generally-intelligent_stock/
+x-tier: 3
+x-tier-reason: no-apis
+x-status: renamed
+x-aliases:
+- Imbue
+x-successor:
+  brand: Imbue
+  profile: all/imbue
+  note: >-
+    Generally Intelligent renamed itself Imbue in 2023. generallyintelligent.com and
+    generallyintelligent.ai both answer 301 to https://imbue.com/ (probed 2026-09-17), and
+    Imbue's About page records the same 2021 founding and the same founders. This profile
+    covers the legacy name only; artifacts, scores and the developer surface (none public)
+    are maintained on the Imbue profile so the company is not counted twice.
+  evidence:
+  - url: https://generallyintelligent.com/
+    status: 301
+    location: https://imbue.com/
+  - url: https://generallyintelligent.ai/
+    status: 301
+    location: https://imbue.com/
+  - url: https://imbue.com/about
+    status: 200
+position: Producing
+access: 3rd-Party
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/imbue.png
 specificationVersion: '0.20'
 created: '2026-09-17'
 modified: '2026-09-17'
 tags:
 - Company
+- Artificial Intelligence
+- Research
+- Foundation Models
+- Agents
+- Reasoning
+- Reinforcement Learning
+- Open-Source
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +61,43 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/generally-intelligent-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/generally-intelligent_stock/
+  url: https://generallyintelligent.com/
+- type: About
+  url: https://imbue.com/about
+- type: Blog
+  url: https://imbue.com/blog
+- type: GitHubOrganization
+  url: https://github.com/imbue-ai
+- type: TermsOfService
+  url: https://imbue.com/terms
+- type: PrivacyPolicy
+  url: https://imbue.com/privacy
+- type: Careers
+  url: https://imbue.com/careers
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Generally Intelligent no longer exists as a brand — it renamed to Imbue in 2023 and
+    generallyintelligent.com 301s every path to imbue.com, where contract discovery
+    (/openapi.json, /graphql, /mcp, /llms.txt, every /.well-known/* document, agent cards)
+    returns real 404s; the company is profiled under its current name at all/imbue, which
+    also records no public developer API.
+  evidence:
+  - url: https://generallyintelligent.com/
+    status: 301
+  - url: https://imbue.com/openapi.json
+    status: 404
+  - url: https://imbue.com/.well-known/agent-card.json
+    status: 404
+  - url: https://docs.imbue.com/
+    status: 302
+  checked: '2026-09-17'
+x-enrichment:
+  date: '2026-09-17'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
