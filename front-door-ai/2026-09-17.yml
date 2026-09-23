@@ -1,0 +1,26 @@
+# Front Door AI Index — generally-intelligent — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: generally-intelligent
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: generallyintelligent.com
+  final_host: imbue.com
+  ownership: inherited
+  owner: generally-intelligent
+  shares_host_with: null
+  inherited_from: imbue.com
+  verdict: scored
+  score: null
+  host_score: 5
+  density: null
+  words: 253
+  tiers:
+    agentic: 0
+    core: 5
+    model: 0
+  ambiguous: 1
+  top_terms:
+    AI: 5
+    agent: 1
